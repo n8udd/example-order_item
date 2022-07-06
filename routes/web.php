@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/test_sql', function () {
     $o = Order::with('items')->first();
-    $o->grandTotal()->toSql();
+    dd($o->grandTotal()->toSql());
 
     /**
      * SELECT
@@ -39,7 +39,7 @@ Route::get('/test_sql', function () {
 
 Route::get('/test_get', function () {
     $o = Order::with('items')->first();
-    $o->grandTotal()->get();
+    dd($o->grandTotal()->get());
 
     /**
      * SELECT
